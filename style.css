@@ -55,3 +55,66 @@
 .projects ol{
 list-style-type: circle;
 }
+.carousel {
+  width: 80%;  /* Adjust carousel width */
+  margin: 0 auto;
+  overflow: hidden;  /* Hide overflowing content */
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;  /* Smooth transition for slide animation */
+}
+
+.carousel-item {
+  flex: 0 0 100%;  /* Evenly distribute items within container */
+  text-align: center;
+  padding: 10px;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
+  color: white;
+  padding: 10px;
+  opacity: 0;  /* Initially hide descriptions */
+  transition: opacity 0.3s ease-in-out;  /* Smooth transition for description fade */
+}
+
+.carousel-item:hover .description {
+  opacity: 1;  /* Show description on hover */
+}
+
+.control-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center buttons vertically */
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.control-btn:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Slight background on hover */
+}
+
+.left {
+  left: 10px; /* Position left button */
+}
+
+.right {
+  right: 10px; /* Position right button */
+}
